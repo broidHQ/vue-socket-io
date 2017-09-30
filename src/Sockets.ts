@@ -1,21 +1,24 @@
 import Emitter from './Emitter';
 
 export default class Sockets {
-    private _listeners: any;
-    private vm: any;
+    public _listeners: any;
+    public vm: any;
 
     constructor(vm: any) {
       this.vm = vm;
+      this._listeners = {};
     }
 
     get listeners(): any {
         return this._listeners;
     }
 
-    public listener(key: string, value?: string): void {
+    public listener(key: string, value?: any): void {
       if (!value) {
-        delete this._listeners;
-        Emitter.removeListener(key, this._listeners[key], this.vm);
+        if (this._listeners[key]) {
+          Emitter.removeListener(key, this._listeners[key], this.vm);
+          delete this._listeners[key];
+        }
         return;
       }
 
