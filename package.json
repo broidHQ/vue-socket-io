@@ -1,0 +1,39 @@
+{
+  "name": "vue-socket-io",
+  "version": "0.0.1",
+  "description": "socket.io implemantation for vuejs and vuex",
+  "main": "dist/build.js",
+  "scripts": {
+    "build": "webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetinSeylan/Vue-Socket.io.git"
+  },
+  "keywords": [
+    "vuejs",
+    "socket",
+    "vue",
+    "socket.io",
+    "websocket",
+    "realtime",
+    "vuex",
+  ],
+  "author": "Issam Hakimi aka Killix, Broid Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MetinSeylan/Vue-Socket.io/issues"
+  },
+  "homepage": "https://github.com/MetinSeylan/Vue-Socket.io#readme",
+  "dependencies": {
+    "socket.io-client": "^2.0.3",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "ts-loader": "^2.3.7",
+    "webpack": "^3.6.0"
+  }
+}

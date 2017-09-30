@@ -111,4 +111,4 @@ export default new Vuex.Store({
 
 ## Note
 
-Initialy a fork of the [repository: Vue-Socket.io](https://github.com/MetinSeylan/Vue-Socket.io)
+Initially a fork of the [repository: Vue-Socket.io](https://github.com/MetinSeylan/Vue-Socket.io), because the original repo look dead and had included some breaking support with browser like IE10+
