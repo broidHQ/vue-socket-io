@@ -62,9 +62,12 @@ export default class Observer {
               continue;
             }
 
-            let camelcased = 'socket_'+event
-                    .replace('SOCKET_', '')
-                    .replace(/^([A-Z])|[\W\s_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase())
+            let camelcased = 'socket_' + event.toLowerCase()
+                .replace('SOCKET_', '')
+                .replace(/[\W\s_]+(\w)/g, (match, p1) => p1.toUpperCase());
+            // let camelcased = 'socket_'+event
+            //         .replace('SOCKET_', '')
+            //         .replace(/^([A-Z])|[\W\s_]+(\w)/g, (match, p1, p2) => p2 ? p2.toUpperCase() : p1.toLowerCase())
 
             if (action === camelcased) {
               this.store.dispatch(namespaced, payload);
