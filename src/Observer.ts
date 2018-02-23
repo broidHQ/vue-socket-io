@@ -64,6 +64,7 @@ export default class Observer {
 
             let camelcased = 'socket_' + event.toLowerCase()
                 .replace('SOCKET_', '')
+                .replace('socket_', '')
                 .replace(/[\W\s_]+(\w)/g, (match, p1) => p1.toUpperCase());
             // let camelcased = 'socket_'+event
             //         .replace('SOCKET_', '')
